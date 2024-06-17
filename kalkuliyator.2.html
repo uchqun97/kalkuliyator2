@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mini kalkuliyator</title>
+</head>
+<body>
+    <h4>javascript kalkuliyator</h4>
+    <input type="number" id="a">
+    <input type="text" id="operator">
+    <input type="number" id="b">
+    <button id="calc">=</button>
+    <h1 id="result">Natija:</h1>
+    <script type="text/javascript">
+        let btn = document.getElementById('calc');
+        let h1 = document.getElementById('result');
+        btn.onclick = function(){
+            let a = document.getElementById('a').value;
+            let b = document.getElementById('b').value;
+            a = parseInt(a);
+            b = parseInt(b);
+            let operator = document.getElementById('operator').value;
+            let result;
+            if(operator === '+') {
+                result = a + b;
+            } else if(operator === '-') {
+                result = a - b;
+            } else if(operator === '*') {
+                result = a * b;
+            } else if(operator === '/') {
+                result = a / b;
+            }
+            h1.innerHTML = "Natija: " + result;
+        };
+    </script>
+</body>
+</html>
